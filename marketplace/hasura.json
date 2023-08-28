@@ -1,0 +1,27 @@
+{
+    "$schema": "./schema.json",
+    "code": "hasura",
+    "name": "Hasura",
+    "description": "The Hasura GraphQL Engine gives you fast, instant realtime GraphQL on your data.",
+    "icon": "https://avatars.githubusercontent.com/u/13966722?s=200&v=4",
+    "image": "hasura/graphql-engine:latest",
+    "command": null,
+    "args": null,
+    "port": 8080,
+    "network": "HTTP",
+    "variables": [
+      {
+        "name": "HASURA_GRAPHQL_DATABASE_URL",
+        "value": "postgres://${POSTGRES_USERNAME}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/postgres"
+      },
+      {
+        "name": "HASURA_GRAPHQL_ADMIN_SECRET",
+        "value": "${password}"
+      },
+      {
+        "name": "HASURA_GRAPHQL_ENABLE_CONSOLE",
+        "value": "true"
+      }
+    ]
+  }
+  
